@@ -69,12 +69,15 @@ def register_commands(cli):
             # Basic transcription
             llm groq-whisper audio.mp3
 
+        \b
             # Translation to English
             llm groq-whisper --translate audio.mp3
 
+        \b
             # Transcription with specific model and language
             llm groq-whisper --model whisper-large-v3 --language fr audio.mp3
 
+        \b
             # Detailed JSON output with timestamps
             llm groq-whisper --response-format verbose_json audio.mp3
         """
