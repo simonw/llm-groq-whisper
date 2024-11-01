@@ -27,4 +27,4 @@ CI = "https://github.com/simonw/llm-groq-whisper/actions"
 groq_whisper = "llm_groq_whisper"
 
 [project.optional-dependencies]
-test = ["pytest"]
+test = ["pytest", "cogapp"]
