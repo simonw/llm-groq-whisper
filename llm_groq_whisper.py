@@ -1,6 +1,7 @@
 import click
 import httpx
 import io
+import json
 import llm
 from typing import Optional, Literal
 
@@ -104,7 +105,10 @@ def register_commands(cli):
                 prompt=prompt,
                 translate=translate,
             )
-            click.echo(result)
+            if isinstance(result, dict):
+                click.echo(json.dumps(result, indent=2))
+            else:
+                click.echo(result)
         except httpx.HTTPError as ex:
             raise click.ClickException(str(ex))
 
@@ -160,7 +164,9 @@ def process_audio(
         data["prompt"] = prompt
 
     with httpx.Client() as client:
-        response = client.post(url, headers=headers, files=files, data=data)
+        response = client.post(
+            url, headers=headers, files=files, data=data, timeout=None
+        )
         response.raise_for_status()
 
         if response_format == "text":
