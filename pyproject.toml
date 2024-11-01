@@ -1,6 +1,6 @@
 [project]
 name = "llm-groq-whisper"
-version = "0.1"
+version = "0.1a0"
 description = "Transcribe audio using the Groq.com Whisper API"
 readme = "README.md"
 authors = [{name = "Simon Willison"}]
