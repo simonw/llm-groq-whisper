@@ -44,10 +44,15 @@ Usage: llm groq-whisper [OPTIONS] AUDIO_FILE
 
   Run transcriptions or translations using the Groq Whisper API
 
-  Usage:      llm groq-whisper audio.mp3 > output.txt     cat audio.mp3 | llm
-  groq-whisper - > output.txt
+  Usage:
 
-  Examples:      # Basic transcription     llm groq-whisper audio.mp3
+      llm groq-whisper audio.mp3 > output.txt
+      cat audio.mp3 | llm groq-whisper - > output.txt
+
+  Examples:
+
+      # Basic transcription
+      llm groq-whisper audio.mp3
 
       # Translation to English     llm groq-whisper --translate audio.mp3
 

@@ -58,11 +58,13 @@ def register_commands(cli):
         Run transcriptions or translations using the Groq Whisper API
 
         Usage:
+
         \b
             llm groq-whisper audio.mp3 > output.txt
             cat audio.mp3 | llm groq-whisper - > output.txt
 
         Examples:
+
         \b
             # Basic transcription
             llm groq-whisper audio.mp3
