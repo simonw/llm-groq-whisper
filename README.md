@@ -13,6 +13,11 @@ Install this plugin in the same environment as [LLM](https://llm.datasette.io/).
 ```bash
 llm install llm-groq-whisper
 ```
+You'll need a [Groq API key](https://console.groq.com/keys). Configure the API key like this:
+```bash
+llm keys set groq
+# Paste key here
+```
 ## Usage
 
 Run transcripts using:
